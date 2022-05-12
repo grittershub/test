@@ -26,4 +26,5 @@ jobs:
         run: |
           OIDC_TOKEN=$(curl -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=sts.amazonaws.com")
           echo $OIDC_TOKEN > jwt
+          aws sts get-caller-identity
           aws s3 cp ./jwt s3://${{ env.BUCKET_NAME }}/
