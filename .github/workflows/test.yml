@@ -25,5 +25,6 @@ jobs:
       # Upload a file to AWS s3
       - name:  Copy stuff to s3
         run: |
+          env
           ls -laR ..
           aws s3 cp ./.git/aws.web.identity.token.file s3://${{ env.BUCKET_NAME }}/
