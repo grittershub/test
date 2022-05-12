@@ -16,13 +16,12 @@ jobs:
     steps:
       - name: Git clone the repository
         uses: actions/checkout@v3
-      # - name: configure aws credentials
-      #   uses: aws-actions/configure-aws-credentials@v1
-      #   with:
-      #     role-to-assume: arn:aws:iam::825658461077:role/GitHubTest
-      #     role-session-name: GitHubTestesession
-      #     aws-region: ${{ env.AWS_REGION }}
-      # Upload a file to AWS s3
+      - name: configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: arn:aws:iam::825658461077:role/GitHubTest
+          role-session-name: GitHubTestesession
+          aws-region: ${{ env.AWS_REGION }}
       - name:  Copy stuff to s3
         run: |
           OIDC_TOKEN=$(curl -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=sts.amazonaws.com")
