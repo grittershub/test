@@ -7,13 +7,6 @@
         "directoryName": "assembly-StageA",
         "displayName": "StageA"
       }
-    },
-    "assembly-StageB": {
-      "type": "cdk:cloud-assembly",
-      "properties": {
-        "directoryName": "assembly-StageB",
-        "displayName": "StageB"
-      }
     }
   }
 }
